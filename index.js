@@ -4,7 +4,6 @@ const test = require('./spec/helper.js');
 (async () => {
     const puppeteer = require('puppeteer');
     let browser, page;
-    debugger;
     browser = await puppeteer.launch({
         headless: false,
         slowMo: 10
