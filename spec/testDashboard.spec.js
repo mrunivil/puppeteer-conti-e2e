@@ -43,6 +43,26 @@
             done();
         }, 15000);
 
+        it('should be possible to navigate to Documents and has Documents in content header', async (done) => {
+            await page.waitForSelector('a>.fa-files-o');
+            component = await page.$('a>.fa-files-o');
+            await component.click();
+            await page.waitForSelector('.w3-container.top-panel.w3-theme-l1>b');
+            component = await page.$('.w3-container.top-panel.w3-theme-l1');
+            expect(await component.$eval('b', node => node.innerText)).toBe('Documents');
+            done();
+        }, 15000);
+
+        it('should be possible to navigate to statistics and has Statistics in content header', async (done) => {
+            await page.waitForSelector('a>.fa-pie-chart');
+            component = await page.$('a>.fa-pie-chart');
+            await component.click();
+            await page.waitForSelector('.w3-container.top-panel.w3-theme-l1>b');
+            component = await page.$('.w3-container.top-panel.w3-theme-l1');
+            expect(await component.$eval('b', node => node.innerText)).toBe('Statistics');
+            done();
+        }, 15000);
+
         afterAll(async (done) => {
             await utils.logout(page);
             await browser.close();
