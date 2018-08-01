@@ -18,3 +18,12 @@ to debug attach a jasmine debugger to your vscode by editing the launch.json fil
 		"name": "Jasmine Debugger",
 		"program": "${workspaceRoot}\\node_modules\\jasmine\\bin\\jasmine.js"
 	}
+usefull links:
+
+>
+
+ - [puppeteer](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagewaitforselectororfunctionortimeout-options-args)
+ - [debugging jasmine](https://www.codersbistro.com/blog/debugging-jasmine-test-cases-visual-studio-code/)
+ - [jasmine](https://jasmine.github.io/)
+
+ 
